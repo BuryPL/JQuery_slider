@@ -13,8 +13,22 @@ $(function () {
             'margin-left': index*slideWidth + '%',
             'width': slideWidth + '%'});
     });
+    
+    
+    
+    
     $('.prev_slide').click(function(){slide(slideIndex - 1);});
     $('.next_slide').click(function(){slide(slideIndex + 1);});
+    window.addEventListener( "keydown", function(e){
+        switch (e.keyCode) {
+            case 37:
+                slide(slideIndex - 1);
+                break;
+            case 39:
+                slide(slideIndex + 1);
+                break;
+        }
+    });
     
     function slide(newSlideIndex) {
         if (newSlideIndex < 0 || newSlideIndex >= slideCount) {return;};
