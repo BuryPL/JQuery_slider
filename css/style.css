@@ -4,12 +4,12 @@
     height: 600px;
 }
 
-#slider .slide_show {
+.slide_show {
     position: absolute;
     height: 100%;
 }
 
-#slider .slide_show .single_slide {
+.slide_show .single_slide {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -39,9 +39,8 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    z-index: 10;
     color: #fff;
-    font-size: 6em;
+    font-size: 3em;
 }
 
 #slider .slider_arrows a:hover {
@@ -50,8 +49,10 @@
 
 #slider .prev_slide {
     left: 0;
+    z-index: 10;
 }
 
 #slider .next_slide {
     right: 0;
+    z-index: 10;
 }
